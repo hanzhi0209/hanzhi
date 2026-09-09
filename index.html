@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>橱窗卡片索引 · Window Display Card Index</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,600;1,9..40,400&family=Fraunces:opsz,wght@9..144,560;9..144,640&family=Noto+Sans+SC:wght@400;600;700&family=Noto+Serif+SC:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="app-header">
+    <div class="brand">
+      <h1>橱窗卡片索引</h1>
+      <div class="en">Window Display Card Index</div>
+    </div>
+    <div class="toolbar">
+      <span class="hint">单击翻转 · 双击展开 · 拖拽重合即可成组</span>
+      <button class="chip active" data-filter="ALL">全部</button>
+      <button class="chip" data-filter="A">A 艺术</button>
+      <button class="chip" data-filter="B">B 文学</button>
+      <button class="chip" data-filter="C">C 历史</button>
+      <button class="chip" data-filter="D">D 隐喻</button>
+      <button class="ghost-btn" id="resetBtn">重置布局</button>
+    </div>
+  </header>
+
+  <main class="workspace">
+    <div id="board" class="board"></div>
+  </main>
+
+  <div class="overlay" id="overlay" role="dialog" aria-modal="true">
+    <div class="overlay-panel">
+      <div class="overlay-code" id="overlayCode"></div>
+      <button class="close-btn" id="closeOverlay" aria-label="关闭">×</button>
+      <img class="overlay-image" id="overlayImg" alt="">
+      <div class="overlay-fields" id="overlayFields"></div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast"></div>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
